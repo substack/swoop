@@ -1,0 +1,38 @@
+{
+    "name" : "swoop",
+    "version" : "0.0.0",
+    "description" : "slide around html elements",
+    "main" : "index.js",
+    "directories" : {
+        "example" : "example"
+    },
+    "dependencies" : {
+        "yarnify" : "~0.1.6"
+    },
+    "devDependencies" : {
+        "domready" : "~0.2.11",
+        "browserify" : "~1.10.15"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/substack/swoop.git"
+    },
+    "keywords" : [
+        "widget",
+        "ui",
+        "yarnify",
+        "browserify",
+        "browser"
+        "html"
+    ],
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "license" : "MIT",
+    "engine" : {
+        "node" : ">=0.4",
+        "browser" : "*"
+    }
+}
