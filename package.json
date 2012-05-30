@@ -22,7 +22,7 @@
         "ui",
         "yarnify",
         "browserify",
-        "browser"
+        "browser",
         "html"
     ],
     "author" : {
