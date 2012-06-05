@@ -1,7 +1,7 @@
 swoop
 =====
 
-Slide around html elements.
+Slide around html elements to build hypercard-style UI widgets.
 
 example
 =======
