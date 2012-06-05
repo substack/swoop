@@ -7,6 +7,7 @@ module.exports = function (slides) {
 function Swoop (slides) {
     var self = this;
     self.slides = {};
+    self.history = [];
     self.element = document.createElement('div');
     
     Object.keys(slides).forEach(function (name) {
@@ -31,7 +32,10 @@ Swoop.prototype.addSlide = function (name, element) {
                     ev.preventDefault();
                 }
                 var name = link.getAttribute('href').replace(/^#/, '');
-                self.show(name);
+                if (name === '_back') {
+                    self.back();
+                }
+                else self.show(name)
             });
         })(links[i]);
     }
@@ -52,8 +56,15 @@ Swoop.prototype.show = function (name) {
         if (self.active) css(self.active, 'display', 'none');
     }
     self.active = slide;
+    self.history.push(name);
     
     return slide;
+};
+
+Swoop.prototype.back = function () {
+    var self = this;
+    var name = self.history.pop();
+    return self.show(name);
 };
 
 Swoop.prototype.appendTo = function (e) {
@@ -69,4 +80,3 @@ function css (elem, name, value) {
     if (!elem.style) elem.style = {};
     elem.style[name] = value;
 }
-
