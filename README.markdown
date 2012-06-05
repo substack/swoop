@@ -10,7 +10,7 @@ example
 
 Map all the slides to html elements, in this case using yarnify:
 
-```
+``` js
 var swoop = require('swoop');
 var domready = require('domready');
 var yarn = require('./yarn');
