@@ -1,6 +1,6 @@
 {
     "name" : "swoop",
-    "version" : "0.0.0",
+    "version" : "0.0.1",
     "description" : "slide around html elements",
     "main" : "index.js",
     "directories" : {

@@ -98,6 +98,14 @@ sw.size(width, height)
 
 Set the size of the slide viewer element.
 
+links
+=====
+
+Elements in your slides with `class="link"` and a hash href turn into a special
+links that advance to a particular slide.
+
+You can also set `href="#_back"` to advance to the previous slide.
+
 install
 =======
 
