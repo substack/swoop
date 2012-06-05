@@ -63,7 +63,8 @@ Swoop.prototype.show = function (name) {
 
 Swoop.prototype.back = function () {
     var self = this;
-    var name = self.history.pop();
+    self.history.pop(); // present slide
+    var name = self.history.pop(); // previous slide
     return self.show(name);
 };
 
