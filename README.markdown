@@ -98,6 +98,26 @@ sw.size(width, height)
 
 Set the size of the slide viewer element.
 
+sw.preventDefault()
+-------------------
+
+Override the default transition between `prev` and `next` slides for `'show'`
+events.
+
+This function only works to prevent the default transition on the same tick as
+the `'show'` event.
+
+events
+======
+
+sw.on('show', function (prev, next) {})
+---------------------------------------
+
+Triggered when `.show()` is called or a `class="link"` element with a slide href
+is clicked.
+
+`prev` and `next` are the string names of the slides being transitioned between.
+
 links
 =====
 

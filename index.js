@@ -46,11 +46,12 @@ Swoop.prototype.show = function (name) {
     var slide = self.slides[name];
     if (!slide) return undefined;
     
-    var useDefault = true;
-    slide.preventDefault = function () { useDefault = false };
-    
     var prev = self.active;
-    this.emit('show', name, prev);
+    var useDefault = true;
+    
+    self.preventDefault = function () { useDefault = false };
+    self.emit('show', name, prev);
+    self.preventDefault = function () {};
     
     if (useDefault) {
         css(slide, 'display', 'block');
