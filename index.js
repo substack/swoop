@@ -57,8 +57,11 @@ Swoop.prototype.show = function (name) {
         css(slide, 'display', 'block');
         if (prev) css(self.slides[prev], 'display', 'none');
     }
-    self.active = name;
-    self.history.push(name);
+    
+    if (prev === self.active) {
+        self.active = name;
+        self.history.push(name);
+    }
     
     return slide;
 };
