@@ -107,6 +107,13 @@ events.
 This function only works to prevent the default transition on the same tick as
 the `'show'` event.
 
+sw.scan(element)
+----------------
+
+Explicitly add slide listeners for `class="link"` with relative slide name hash
+hrefs to the DOM Element `element`. This is useful if you want to link to slides
+from container elements that are not slides themselves.
+
 events
 ======
 

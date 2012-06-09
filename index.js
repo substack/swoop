@@ -18,11 +18,14 @@ function Swoop (slides) {
 Swoop.prototype = new EventEmitter;
 
 Swoop.prototype.addSlide = function (name, element) {
-    var self = this;
-    self.slides[name] = element;
+    this.slides[name] = element;
     css(element, 'display', 'none');
-    self.element.appendChild(element);
-    
+    this.scan(element);
+    this.element.appendChild(element);
+};
+
+Swoop.prototype.scan = function (element) {
+    var self = this;
     var links = element.querySelectorAll('.link');
     
     for (var i = 0; i < links.length; i++) {
