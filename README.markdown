@@ -1,7 +1,9 @@
 swoop
 =====
 
-Slide around html elements to build hypercard-style UI widgets.
+Show and hide html elements to build UI widgets.
+
+![swooping osprey](http://substack.net/images/swoop.png)
 
 example
 =======
