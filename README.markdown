@@ -10,7 +10,8 @@ example
 
 [View the example.](http://substack.net/projects/swoop-example/)
 
-Map all the slides to html elements, in this case using yarnify:
+Map all the slides to html elements, in this case using
+[yarnify](https://github.com/substack/yarnify):
 
 ``` js
 var swoop = require('swoop');
