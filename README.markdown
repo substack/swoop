@@ -51,7 +51,7 @@ that advances to the slide name.
 Bundle it all up:
 
 ```
-$ yarnify knit slides/ -o yarn.js
+$ yarnify slides/ -o yarn.js
 $ browserify entry.js -o bundle.js
 ```
 
