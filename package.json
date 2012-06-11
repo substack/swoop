@@ -1,6 +1,6 @@
 {
     "name" : "swoop",
-    "version" : "0.1.6",
+    "version" : "0.1.7",
     "description" : "slide around html elements",
     "main" : "index.js",
     "directories" : {
@@ -9,7 +9,7 @@
     "devDependencies" : {
         "domready" : "~0.2.11",
         "browserify" : "~1.10.15",
-        "yarnify" : "~0.4.0"
+        "yarnify" : "~0.5.1"
     },
     "repository" : {
         "type" : "git",
