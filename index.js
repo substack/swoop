@@ -27,20 +27,24 @@ Swoop.prototype.addSlide = function (name, element) {
 Swoop.prototype.scan = function (element) {
     var self = this;
     var links = element.querySelectorAll('.link');
+    if (element.className === 'link'
+    || (typeof element.hasClass === 'function' && element.hasClass('link'))) {
+        wrap(element);
+    }
     
-    for (var i = 0; i < links.length; i++) {
-        (function (link) {
-            link.addEventListener('click', function (ev) {
-                if (ev && typeof ev.preventDefault === 'function') {
-                    ev.preventDefault();
-                }
-                var name = link.getAttribute('href').replace(/^#/, '');
-                if (name === '_back') {
-                    self.back();
-                }
-                else self.show(name)
-            });
-        })(links[i]);
+    for (var i = 0; i < links.length; i++) wrap(links[i]);
+    
+    function wrap (link) {
+        link.addEventListener('click', function (ev) {
+            if (ev && typeof ev.preventDefault === 'function') {
+                ev.preventDefault();
+            }
+            var name = link.getAttribute('href').replace(/^#/, '');
+            if (name === '_back') {
+                self.back();
+            }
+            else self.show(name)
+        });
     }
 };
 
