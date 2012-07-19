@@ -36,10 +36,13 @@ Swoop.prototype.scan = function (element) {
     
     function wrap (link) {
         link.addEventListener('click', function (ev) {
+            var href = link.getAttribute('href');
+            if (!href) return;
+            
             if (ev && typeof ev.preventDefault === 'function') {
                 ev.preventDefault();
             }
-            var name = link.getAttribute('href').replace(/^#/, '');
+            var name = href.replace(/^#/, '');
             if (name === '_back') {
                 self.back();
             }
